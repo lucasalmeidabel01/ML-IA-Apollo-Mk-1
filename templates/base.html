@@ -1,0 +1,24 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Apollo.IA.{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-default" role="navigation">
+	<a class="navbar-brand" href="/">Apollo.IA.</a>
+		<ul class="nav nav-pills">
+			<a href="#" class="btn btn-default navbar-btn" role="button">Como usar?</a>
+			<a href="#" class="btn btn-default navbar-btn" role="button">Dados</a>
+			<a href="/premierleague" class="btn btn-default navbar-btn" role="button">Previsão</a>
+			<a href="#" class="btn btn-default navbar-btn" role="button">Redes Sociais</a>
+		</ul>
+</div>
+
+
+{% endblock %}
+
+
+{% block content %}
+<div class='container'>
+	{% block page_content %}{% endblock %}
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+.bg-2 
+{ 
+  background-color: #fc891d; 
+  color: #ffffff;
+}
+.bg-3 
+{ 
+  background-color: #fff; 
+   color: #555555;
+}
+.bg-4
+{
+  background-color: #eaa41f;
+  color: #fff;
+}
+.container-fluid 
+{
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+body
+{
+  font-family: 'Ubuntu',arial;
+
+}
+.div{
+    position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+    0 0 60px 30px #fff,
+    0 0 100px 60px #f0f,
+    0 0 140px 90px #0ff;
+}

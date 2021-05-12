@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}Apollo.IA.{% endblock %}
+
+{% block page_content %}
+<html>
+<title>Apollo.IA.</title>
+<head>
+<link href="https://allfont.net/allfont.css?fonts=Ubuntu" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	/* baseado no código de Chris Smith: https://codepen.io/chris22smith/pen/RZogMa*/
+  .bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #fc891d 50%, #eaa41f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+  }
+  .bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+  }
+
+ .bg3 {
+ animation-duration:5s;
+ }
+ .content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+</style>
+</head>
+<body>
+<br>
+	<div class="bg"></div>
+	<div class="bg bg2"></div>
+	<div class="bg bg3"></div>
+	<div class="content">
+		<h3 class="text-1">O resultado para a partida é</h3>
+<br>
+<br>
+		<h1 class="text-2"> {{ prediction }} </h1>
+<br>
+<br>
+		<h4>0(zero) significa que há maior probabilidade de não haver empate.</h4>
+<br>
+</body>
+</html>
+{% endblock %}
