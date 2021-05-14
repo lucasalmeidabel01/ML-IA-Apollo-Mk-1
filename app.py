@@ -8,7 +8,7 @@ import joblib
 
 app = Flask(__name__)
 
-model1 = joblib.load("model/model.pkl")
+model1 = joblib.load("model/modelv2.pkl")
 
 
 @app.route("/")
@@ -26,7 +26,7 @@ def prediction():
 	scaler = StandardScaler()
 	scaled_features = scaler.fit_transform(features.reshape(-1,1))
 	scaled_features = scaled_features.reshape(1,-1)
-	prediction1 = model1.predict(scaled_features)
+	prediction1 = (model1.predict_proba(scaled_features)[:,1] >=0.321779)
 	prediction1 = prediction1[0]
 	return render_template('prediction.html', prediction = prediction1)
 
