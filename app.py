@@ -27,7 +27,6 @@ def prediction():
 	scaled_features = scaler.fit_transform(features.reshape(-1,1))
 	scaled_features = scaled_features.reshape(1,-1)
 	prediction1 = (model1.predict_proba(scaled_features)[:,1] >=0.321779)
-	prediction1 = prediction1[0]
 	return render_template('prediction.html', prediction = prediction1)
 
 if __name__ == 'main':
