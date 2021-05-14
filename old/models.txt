@@ -1,0 +1,2 @@
+modelv1 = plgameresults_voting77_30042021
+modelv2 = plgameresults_voting75_14052021
